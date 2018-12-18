@@ -23,9 +23,7 @@
         ![](figures/登录NVIDIA官网.png "登录NVIDIA官网")
 
     5.  根据界面提示，进入NVIDIA门户网站，并选择“Software & Services \> Product Information”。
-
-        ![](figures/zh-cn_image_0132510897.png)
-
+       
     6.  选择“Archived Versions”页签。
     7.  单击“4.1”版本的“NVIDIA GRID”。
     8.  在“Product Download”页面，单击“GRID for UVP”。
@@ -52,7 +50,7 @@
 
     5.  根据界面提示，进入NVIDIA门户网站，并选择“Software & Services \> Product Information”。
 
-        ![](figures/zh-cn_image_0132724841.png)
+       
 
     6.  <a name="zh-cn_topic_0097289624_li66651834172318"></a>选择“Archived Versions”页签。
     7.  单击“4.1”版本的“NVIDIA GRID”。
