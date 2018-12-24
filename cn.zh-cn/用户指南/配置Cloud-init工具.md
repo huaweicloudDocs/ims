@@ -188,7 +188,7 @@ Cloud-init工具安装完成后，请参考本节操作配置Cloud-init工具。
 
 **cloud-init init --local**
 
-正确安装的Cloud-init会显示Cloud-init的版本详细信息，并且无任何错误信息。例如，正确安装的情况下，不含有缺少文件的提示信息。如果显示配置错误信息，请联系技术支持。
+正确安装的Cloud-init会显示Cloud-init的版本详细信息，并且无任何错误信息。例如，正确安装的情况下，不含有缺少文件的提示信息。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >执行如下命令，可对系统用户密码有效期设置为最大。（可选）  
