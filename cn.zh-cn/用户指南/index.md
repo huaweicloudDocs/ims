@@ -5,43 +5,43 @@
     -   [通过云服务器创建Windows系统盘镜像]
         -   [概述](概述-通过云服务器创建Windows系统盘镜像.md)
         -   [配置Windows云服务器](配置Windows云服务器.md)
-        -   [安装Windows特殊驱动（可选）](安装Windows特殊驱动（可选）.md)
-        -   [安装一键式密码重置插件（Windows）](安装一键式密码重置插件（Windows）.md)
+        -   [安装Windows特殊驱动\(可选\)](安装Windows特殊驱动(可选).md)
+        -   [安装一键式密码重置插件\(Windows\)](安装一键式密码重置插件(Windows).md)
         -   [安装Cloudbase-init工具](安装Cloudbase-init工具.md)
         -   [优化Windows私有镜像](优化Windows私有镜像.md)
-        -   [执行Sysprep（可选）](执行Sysprep（可选）.md)
+        -   [执行Sysprep\(可选\)](执行Sysprep(可选).md)
         -   [创建Windows私有镜像](创建Windows私有镜像.md)
 
     -   [通过云服务器创建Linux系统盘镜像]
         -   [概述](概述-通过云服务器创建Linux系统盘镜像.md)
         -   [查看并设置云服务器](查看并设置云服务器.md)
-        -   [安装Linux特殊驱动（可选）](安装Linux特殊驱动（可选）.md)
-        -   [安装一键式密码重置插件（Linux）](安装一键式密码重置插件（Linux）.md)
+        -   [安装Linux特殊驱动\(可选\)](安装Linux特殊驱动(可选).md)
+        -   [安装一键式密码重置插件\(Linux\)](安装一键式密码重置插件(Linux).md)
         -   [安装Cloud-init工具](安装Cloud-init工具.md)
         -   [配置Cloud-init工具](配置Cloud-init工具.md)
-        -   [查看并清理网络规则文件（可选）](查看并清理网络规则文件（可选）.md)
+        -   [查看并清理网络规则文件\(可选\)](查看并清理网络规则文件(可选).md)
         -   [优化Linux私有镜像](优化Linux私有镜像.md)
         -   [查看并卸载云服务器的数据盘](查看并卸载云服务器的数据盘.md)
         -   [创建Linux私有镜像](创建Linux私有镜像.md)
 
     -   [通过外部镜像文件创建Windows系统盘镜像]
         -   [概述](概述-通过外部镜像文件创建Windows系统盘镜像.md)
-        -   [上传外部镜像文件（Windows）](上传外部镜像文件（Windows）.md)
-        -   [注册镜像（Windows）](注册镜像（Windows）.md)
-        -   [创建云服务器（Windows）](创建云服务器（Windows）.md)
-        -   [配置云服务器（Windows）](配置云服务器（Windows）.md)
+        -   [上传外部镜像文件\(Windows\)](上传外部镜像文件(Windows).md)
+        -   [注册镜像\(Windows\)](注册镜像(Windows).md)
+        -   [创建云服务器\(Windows\)](创建云服务器(Windows).md)
+        -   [配置云服务器\(Windows\)](配置云服务器(Windows).md)
         -   [安装Guest OS driver到Windows云服务器](安装Guest-OS-driver到Windows云服务器.md)
-        -   [通过云服务器创建镜像（Windows）](通过云服务器创建镜像（Windows）.md)
-        -   [清理环境（可选）](清理环境-Windows.md)
+        -   [通过云服务器创建镜像\(Windows\)](通过云服务器创建镜像(Windows).md)
+        -   [清理环境\(可选\)](清理环境-Windows.md)
 
     -   [通过外部镜像文件创建Linux系统盘镜像]
         -   [概述](概述-通过外部镜像文件创建Linux系统盘镜像.md)
-        -   [上传外部镜像文件（Linux）](上传外部镜像文件（Linux）.md)
-        -   [注册镜像（Linux）](注册镜像（Linux）.md)
-        -   [创建云服务器（Linux）](创建云服务器（Linux）.md)
-        -   [配置云服务器（Linux）](配置云服务器（Linux）.md)
-        -   [通过云服务器创建镜像（Linux）](通过云服务器创建镜像（Linux）.md)
-        -   [清理环境（可选）](清理环境-Linux.md)
+        -   [上传外部镜像文件\(Linux\)](上传外部镜像文件(Linux).md)
+        -   [注册镜像\(Linux\)](注册镜像(Linux).md)
+        -   [创建云服务器\(Linux\)](创建云服务器(Linux).md)
+        -   [配置云服务器\(Linux\)](配置云服务器(Linux).md)
+        -   [通过云服务器创建镜像\(Linux\)](通过云服务器创建镜像(Linux).md)
+        -   [清理环境\(可选）](清理环境-Linux.md)
 
     -   [创建裸金属服务器系统盘镜像](创建裸金属服务器系统盘镜像.md)
     -   [通过云服务器的数据盘创建数据盘镜像](通过云服务器的数据盘创建数据盘镜像.md)
@@ -65,16 +65,16 @@
         -   [删除镜像的共享租户](删除镜像的共享租户.md)
 
     -   [导出镜像](导出镜像.md)
-    -   [优化私有镜像（Windows）]
-        -   [优化过程（Windows）](优化过程（Windows）.md)
+    -   [优化私有镜像\(Windows\)]
+        -   [优化过程\(Windows\)](优化过程(Windows).md)
         -   [查看Windows操作系统云服务器虚拟化类型](查看Windows操作系统云服务器虚拟化类型.md)
         -   [相关软件及获取方式](相关软件及获取方式.md)
         -   [在Windows系统中安装PV driver](在Windows系统中安装PV-driver.md)
         -   [Windows上安装UVP VMTools](Windows上安装UVP-VMTools.md)
         -   [清除系统日志](清除系统日志.md)
 
-    -   [优化私有镜像（Linux）]
-        -   [优化过程（Linux）](优化过程（Linux）.md)
+    -   [优化私有镜像\(Linux\)]
+        -   [优化过程\(Linux\)](优化过程(Linux).md)
         -   [查看Linux操作系统云服务器器虚拟化类型](查看Linux操作系统云服务器器虚拟化类型.md)
         -   [在Linux系统中卸载PV Driver](在Linux系统中卸载PV-Driver.md)
         -   [修改grub文件磁盘标识方式为UUID](修改grub文件磁盘标识方式为UUID.md)

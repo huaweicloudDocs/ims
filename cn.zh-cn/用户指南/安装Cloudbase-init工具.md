@@ -21,7 +21,7 @@
 
 ## 安装Cloudbase-init工具<a name="zh-cn_topic_0029124575_section54473519191017"></a>
 
-1.  安装Cloudbase-init工具前请确保已安装一键式密码重置插件。操作步骤请参考[安装一键式密码重置插件（Windows）](安装一键式密码重置插件（Windows）.md)。
+1.  安装Cloudbase-init工具前请确保已安装一键式密码重置插件。操作步骤请参考[安装一键式密码重置插件\(Windows\)](安装一键式密码重置插件(Windows).md)。
 2.  在Windows操作系统中，单击“开始”，选择“控制面板 \> 程序 \> 程序和功能”查看是否安装Cloudbase-init。
     -   是，执行[配置Cloudbase-init工具](#section67455211370)
     -   否，执行以下安装操作步骤。
@@ -91,7 +91,7 @@
 
 2.  在cloudbase-init安装路径的配置文件“C:\\Program Files\\Cloudbase Solutions\\Cloudbase-Init\\conf\\cloudbase-init.conf”中增加配置项“metadata\_services=cloudbaseinit.metadata.services.httpservice.HttpService”，配置agent访问openstack数据源。
 3.  **（可选）**当cloudbase-init为0.9.12及以上版本时，用户可以自定义配置密码长度。在cloudbase-init安装路径的配置文件“C:\\Program Files\\Cloudbase Solutions\\Cloudbase-Init\\conf\\cloudbase-init.conf”里修改配置项“user\_password\_length”的值，完成密码长度的自定义配置。
-4.  **（可选）**选择密码注入方式首次登录时，系统默认强制用户修改登录密码，若用户根据个人意愿，不需要修改首次登陆使用的登录密码时，可关闭此功能。在cloudbase-init安装路径的配置文件“C:\\Program Files\\Cloudbase Solutions\\Cloudbase-Init\\conf\\cloudbase-init.conf”配置里增加配置项“first\_logon\_behaviour=no”。
+4.  **（可选）**选择密码注入方式首次登录时，系统默认强制用户修改登录密码，若用户根据个人意愿，不需要修改首次登录使用的登录密码时，可关闭此功能。在cloudbase-init安装路径的配置文件“C:\\Program Files\\Cloudbase Solutions\\Cloudbase-Init\\conf\\cloudbase-init.conf”配置里增加配置项“first\_logon\_behaviour=no”。
 5.  为了防止镜像中DHCP租期过长导致创建的云服务器无法正确的获取地址，用户需要释放当前的DHCP地址。
 
     在windows命令行中，执行以下命令释放当前的DHCP地址。
