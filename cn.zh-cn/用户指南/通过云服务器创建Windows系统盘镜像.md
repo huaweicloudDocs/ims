@@ -1,0 +1,122 @@
+# 通过云服务器创建Windows系统盘镜像<a name="ims_01_0201"></a>
+
+## 操作场景<a name="section1787117288167"></a>
+
+如果您已经创建了一台Windows云服务器，并根据业务需要进行了自定义配置（如安装软件、部署应用环境等），您可以为更新后的云服务器创建系统盘镜像。使用该镜像创建新的云服务器，会包含您已配置的自定义项，省去您重复配置的时间。
+
+## 前提条件<a name="section943045519380"></a>
+
+创建私有镜像前，请您务必执行以下操作：
+
+-   请将云服务器中的敏感数据删除后再创建私有镜像，避免数据安全隐患。
+-   确保云服务器处于运行中或关机状态。
+-   检查云服务器的网络配置，确保网卡属性为DHCP方式，按需开启远程桌面连接功能。详情请参见[设置网卡属性为DHCP（Windows）](设置网卡属性为DHCP（Windows）.md)和[开启远程桌面连接功能](开启远程桌面连接功能.md)。
+-   有些云服务器正常运行或者高级功能依赖某些驱动，例如：GPU加速型云服务器依赖Tesla驱动和GRID/vGPU驱动。因此，需要提前安装特殊驱动。详情请参见[安装Windows特殊驱动](安装Windows特殊驱动.md)。
+-   检查云服务器中是否已安装一键式重置密码插件，保证镜像创建的新云服务器可以使用控制台的“重置密码”功能进行密码重置。详情请参见[安装一键式重置密码插件（Windows）](安装一键式重置密码插件（Windows）.md)。
+-   检查云服务器中是否已安装Cloudbase-Init工具，保证镜像创建的新云服务器可以使用控制台的“用户数据注入”功能注入初始化自定义信息（例如为云服务器设置登录密码）。详情请参见[安装并配置Cloudbase-Init工具](安装并配置Cloudbase-Init工具.md)。
+-   检查并安装PV driver和UVP VMTools驱动，确保镜像创建的新云服务器同时支持KVM虚拟化和XEN虚拟化，并且可以提升云服务器网络性能。
+
+    详细操作请参见[优化过程（Windows）](优化过程（Windows）.md)中的步骤2\~步骤5。
+
+-   执行Sysprep操作，确保镜像创建的新云服务器加入域后SID唯一。对于集群部署场景，SID需要保持唯一。详情请参见[执行Sysprep](执行Sysprep.md)。
+
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>如果待创建私有镜像的云服务器使用的是公共镜像，那么默认已安装一键式重置密码插件和Cloudbase-Init工具，指导中均提供了验证是否安装的方法，您可以参考相应内容确认。  
+
+## 操作步骤<a name="section146023151537"></a>
+
+1.  登录管理控制台。
+2.  选择“计算 \> 镜像服务”。
+
+    进入镜像服务页面。
+
+3.  单击右上角的“创建私有镜像”，根据界面要求填写如下信息：
+
+    包含“镜像类型和来源”和“配置信息”两个信息块，各参数说明参见[表1](#table050019474117)和[表2](#table6978715749)。
+
+    **表 1**  镜像类型和来源
+
+    <a name="table050019474117"></a>
+    <table><thead align="left"><tr id="row1350164712110"><th class="cellrowborder" valign="top" width="25.96%" id="mcps1.2.3.1.1"><p id="p12501447314"><a name="p12501447314"></a><a name="p12501447314"></a>参数</p>
+    </th>
+    <th class="cellrowborder" valign="top" width="74.03999999999999%" id="mcps1.2.3.1.2"><p id="p1350114720117"><a name="p1350114720117"></a><a name="p1350114720117"></a>说明</p>
+    </th>
+    </tr>
+    </thead>
+    <tbody><tr id="row1450134714120"><td class="cellrowborder" valign="top" width="25.96%" headers="mcps1.2.3.1.1 "><p id="p1550114471116"><a name="p1550114471116"></a><a name="p1550114471116"></a>区域</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.03999999999999%" headers="mcps1.2.3.1.2 "><p id="p1640415402364"><a name="p1640415402364"></a><a name="p1640415402364"></a>请选择靠近您业务的区域。</p>
+    <p id="p05011247218"><a name="p05011247218"></a><a name="p05011247218"></a>如果区域选择错误，可以在私有镜像创建成功后通过“<a href="跨区域复制镜像.md">跨区域复制功能</a>”将镜像复制到其他区域。</p>
+    </td>
+    </tr>
+    <tr id="row350214713113"><td class="cellrowborder" valign="top" width="25.96%" headers="mcps1.2.3.1.1 "><p id="p650294716116"><a name="p650294716116"></a><a name="p650294716116"></a>创建方式</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.03999999999999%" headers="mcps1.2.3.1.2 "><p id="p75021947615"><a name="p75021947615"></a><a name="p75021947615"></a>选择“系统盘镜像”。</p>
+    </td>
+    </tr>
+    <tr id="row1650284720113"><td class="cellrowborder" valign="top" width="25.96%" headers="mcps1.2.3.1.1 "><p id="p125022471113"><a name="p125022471113"></a><a name="p125022471113"></a>选择镜像源</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.03999999999999%" headers="mcps1.2.3.1.2 "><p id="p850214712118"><a name="p850214712118"></a><a name="p850214712118"></a>选择“云服务器”，然后从列表中选择已完成相关配置的云服务器。</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+    **表 2**  配置信息
+
+    <a name="table6978715749"></a>
+    <table><thead align="left"><tr id="row1597918159415"><th class="cellrowborder" valign="top" width="25.91%" id="mcps1.2.3.1.1"><p id="p597916152418"><a name="p597916152418"></a><a name="p597916152418"></a>参数</p>
+    </th>
+    <th class="cellrowborder" valign="top" width="74.09%" id="mcps1.2.3.1.2"><p id="p99796151642"><a name="p99796151642"></a><a name="p99796151642"></a>说明</p>
+    </th>
+    </tr>
+    </thead>
+    <tbody><tr id="row190153318123"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p156591952159"><a name="p156591952159"></a><a name="p156591952159"></a>加密</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p96591652653"><a name="p96591652653"></a><a name="p96591652653"></a>镜像的加密属性，不可更改。</p>
+    <a name="ul94161232191418"></a><a name="ul94161232191418"></a><ul id="ul94161232191418"><li>使用未加密的<span id="text29471245182217"><a name="text29471245182217"></a><a name="text29471245182217"></a>云服务器</span><span id="text1394714458224"><a name="text1394714458224"></a><a name="text1394714458224"></a></span>创建的私有镜像为未加密的私有镜像。</li><li>使用加密的<span id="text532594852218"><a name="text532594852218"></a><a name="text532594852218"></a>云服务器</span><span id="text6325194812212"><a name="text6325194812212"></a><a name="text6325194812212"></a></span>创建的私有镜像为加密的私有镜像。</li></ul>
+    </td>
+    </tr>
+    <tr id="row36593522511"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p19659452051"><a name="p19659452051"></a><a name="p19659452051"></a>名称</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p126597521359"><a name="p126597521359"></a><a name="p126597521359"></a>设置一个便于您识别的镜像名称。</p>
+    </td>
+    </tr>
+    <tr id="row1320515143611"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p112050141866"><a name="p112050141866"></a><a name="p112050141866"></a>企业项目</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p1920521419610"><a name="p1920521419610"></a><a name="p1920521419610"></a>从下拉列表中选择所在的企业项目。该参数针对企业用户使用，只有开通了企业项目的客户，或者权限为企业主帐号的客户才可见。如需使用该功能，请联系您的客户经理申请开通。</p>
+    <p id="p1916781617248"><a name="p1916781617248"></a><a name="p1916781617248"></a>企业项目是一种云资源管理方式，企业项目管理服务提供统一的云资源按项目管理，以及项目内的资源管理、成员管理。</p>
+    </td>
+    </tr>
+    <tr id="row142057141619"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p1420612141267"><a name="p1420612141267"></a><a name="p1420612141267"></a>标签</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p820611415612"><a name="p820611415612"></a><a name="p820611415612"></a>可选参数，为镜像设置标签键和标签值，便于识别和管理。</p>
+    </td>
+    </tr>
+    <tr id="row720613141962"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p7206111416617"><a name="p7206111416617"></a><a name="p7206111416617"></a>描述</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p420631410613"><a name="p420631410613"></a><a name="p420631410613"></a>可选参数，对镜像进行描述。</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+4.  单击“立即创建”。
+5.  根据界面提示，确认镜像参数。阅读并勾选协议，单击“提交申请”。
+6.  根据界面提示，返回私有镜像列表查看镜像状态。
+
+    镜像创建时间与镜像文件本身大小有关，也与网络状态、并发任务数有关，请耐心等待。当镜像的状态为“正常”时，表示创建完成。
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >-   在创建镜像过程中，请勿对所选择的云服务器及其相关联资源进行其他操作。  
+    >-   使用加密镜像创建的弹性云服务器为加密的弹性云服务器，加密的云服务器的密钥与加密镜像的密钥相同。  
+    >-   使用加密的弹性云服务器创建的镜像为加密镜像，该加密镜像的密钥与加密的云服务器的密钥相同。  
+
+
+## 后续操作<a name="section164716121117"></a>
+
+成功创建系统盘镜像后，您可以使用该镜像创建云服务器，也可以为已有云服务器切换操作系统，实现两台服务器之间的数据迁移。详细操作可参考以下内容：
+
+-   [通过镜像创建云服务器](通过镜像创建云服务器.md)
+-   [切换操作系统](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0031523135.html)
+
