@@ -10,87 +10,22 @@
 ## 安装须知<a name="section6704341693848"></a>
 
 -   用户自行决定是否安装CloudResetPwdAgent插件，使云服务器具备一键式重置密码功能。
--   一键式重置密码插件CloudResetPwdAgent已按照GNU General Public License v2.0协议开源至[Github开源平台](https://github.com/huaweicloud/cloudresetpwdagent)，开放、透明、安全，请您放心使用。
+-   一键式重置密码插件CloudResetPwdAgent已按照GNU General Public License v2.0协议开源至Github开源平台，开放、透明、安全，请您放心使用。
 -   支持安装一键式重置密码插件的操作系统版本如[表1](#table53992539710)所示。
 
     **表 1**  支持安装一键式重置密码插件的操作系统版本
 
-    <a name="table53992539710"></a>
-    <table><thead align="left"><tr id="row939911531274"><th class="cellrowborder" valign="top" width="34.660000000000004%" id="mcps1.2.3.1.1"><p id="p10399153773"><a name="p10399153773"></a><a name="p10399153773"></a>操作系统类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="65.34%" id="mcps1.2.3.1.2"><p id="p7399145319712"><a name="p7399145319712"></a><a name="p7399145319712"></a>操作系统版本</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row123991353674"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p173994533717"><a name="p173994533717"></a><a name="p173994533717"></a>CentOS</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p63993531372"><a name="p63993531372"></a><a name="p63993531372"></a>CentOS 7.3 64bit</p>
-    <p id="p1539910538717"><a name="p1539910538717"></a><a name="p1539910538717"></a>CentOS 7.2 64bit</p>
-    <p id="p183991353678"><a name="p183991353678"></a><a name="p183991353678"></a>CentOS 7.0 64bit</p>
-    <p id="p8399753677"><a name="p8399753677"></a><a name="p8399753677"></a>CentOS 7.1 64bit</p>
-    <p id="p1639914531470"><a name="p1639914531470"></a><a name="p1639914531470"></a>CentOS 6.9 64bit</p>
-    <p id="p639910531475"><a name="p639910531475"></a><a name="p639910531475"></a>CentOS 6.8 64bit</p>
-    <p id="p3399185315714"><a name="p3399185315714"></a><a name="p3399185315714"></a>CentOS 6.8 32bit</p>
-    <p id="p12399145317715"><a name="p12399145317715"></a><a name="p12399145317715"></a>CentOS 6.6 32bit</p>
-    <p id="p63996539719"><a name="p63996539719"></a><a name="p63996539719"></a>CentOS 6.6 64bit</p>
-    <p id="p153995531072"><a name="p153995531072"></a><a name="p153995531072"></a>CentOS 6.5 64bit</p>
-    <p id="p4399125317710"><a name="p4399125317710"></a><a name="p4399125317710"></a>CentOS 6.4 64bit</p>
-    <p id="p1439911531776"><a name="p1439911531776"></a><a name="p1439911531776"></a>CentOS 6.3 64bit</p>
-    </td>
-    </tr>
-    <tr id="row239945312717"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p163992053773"><a name="p163992053773"></a><a name="p163992053773"></a>Debian</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p039917533716"><a name="p039917533716"></a><a name="p039917533716"></a>Debian 9.0 64bit</p>
-    <p id="p193991531172"><a name="p193991531172"></a><a name="p193991531172"></a>Debian 8.8 64bit</p>
-    <p id="p439975313712"><a name="p439975313712"></a><a name="p439975313712"></a>Debian 8.2 64bit</p>
-    <p id="p0399453974"><a name="p0399453974"></a><a name="p0399453974"></a>Debian 7.5 64bit</p>
-    <p id="p11399205316714"><a name="p11399205316714"></a><a name="p11399205316714"></a>Debian 7.5 32bit</p>
-    </td>
-    </tr>
-    <tr id="row43992531471"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p2039918531376"><a name="p2039918531376"></a><a name="p2039918531376"></a>openSUSE</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p3399115314716"><a name="p3399115314716"></a><a name="p3399115314716"></a>openSUSE 42.2 64bit</p>
-    <p id="p3399353774"><a name="p3399353774"></a><a name="p3399353774"></a>openSUSE 13.2 64bit</p>
-    <p id="p143994531979"><a name="p143994531979"></a><a name="p143994531979"></a>openSUSE Leap 42.2 64bit</p>
-    <p id="p12399195317710"><a name="p12399195317710"></a><a name="p12399195317710"></a>openSUSE Leap 42.1 64bit</p>
-    </td>
-    </tr>
-    <tr id="row53991553475"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p73991453573"><a name="p73991453573"></a><a name="p73991453573"></a>SUSE</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p2039917531079"><a name="p2039917531079"></a><a name="p2039917531079"></a>SUSE 12 SP2 64bit</p>
-    <p id="p1339965313716"><a name="p1339965313716"></a><a name="p1339965313716"></a>SUSE 12 SP1 64bit</p>
-    <p id="p143998532075"><a name="p143998532075"></a><a name="p143998532075"></a>SUSE 11 SP4 64bit</p>
-    </td>
-    </tr>
-    <tr id="row173995531874"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p63995532719"><a name="p63995532719"></a><a name="p63995532719"></a>Ubuntu</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p0399125314719"><a name="p0399125314719"></a><a name="p0399125314719"></a>Ubuntu 16.10 32bit</p>
-    <p id="p193991532717"><a name="p193991532717"></a><a name="p193991532717"></a>Ubuntu 16.04 32bit</p>
-    <p id="p139985319719"><a name="p139985319719"></a><a name="p139985319719"></a>Ubuntu Server 16.04 64bit</p>
-    <p id="p14399185319713"><a name="p14399185319713"></a><a name="p14399185319713"></a>Ubuntu Server 14.04 64bit</p>
-    <p id="p7399195313711"><a name="p7399195313711"></a><a name="p7399195313711"></a>Ubuntu Server 14.04 32bit</p>
-    </td>
-    </tr>
-    <tr id="row439912531471"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p203991353970"><a name="p203991353970"></a><a name="p203991353970"></a>EulerOS</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p839995316717"><a name="p839995316717"></a><a name="p839995316717"></a>EulerOS 2.2 64bit</p>
-    </td>
-    </tr>
-    <tr id="row63998536710"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p183998531477"><a name="p183998531477"></a><a name="p183998531477"></a>Fedora</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p8399125320717"><a name="p8399125320717"></a><a name="p8399125320717"></a>Fedora 25 64bit</p>
-    <p id="p83991553977"><a name="p83991553977"></a><a name="p83991553977"></a>Fedora 24 64bit</p>
-    </td>
-    </tr>
-    <tr id="row139910531478"><td class="cellrowborder" valign="top" width="34.660000000000004%" headers="mcps1.2.3.1.1 "><p id="p103991153778"><a name="p103991153778"></a><a name="p103991153778"></a>Oracle Linux</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="65.34%" headers="mcps1.2.3.1.2 "><p id="p13399453976"><a name="p13399453976"></a><a name="p13399453976"></a>Oracle Linux 7.3 64bit</p>
-    <p id="p1539917531273"><a name="p1539917531273"></a><a name="p1539917531273"></a>Oracle Linux 6.9 64bit</p>
-    <p id="p1139912531710"><a name="p1139912531710"></a><a name="p1139912531710"></a>Oracle Linux 6.5 64bit</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|操作系统类型|操作系统版本|
+|--|--|
+|CentOS|CentOS 8.3 64bitCentOS 8.2 64bitCentOS 8.1 64bitCentOS 8.0 64bitCentOS 7.3 64bitCentOS 7.2 64bitCentOS 7.0 64bitCentOS 7.1 64bitCentOS 6.9 64bitCentOS 6.8 64bitCentOS 6.8 32bitCentOS 6.6 32bitCentOS 6.6 64bitCentOS 6.5 64bitCentOS 6.4 64bitCentOS 6.3 64bitCentOS 8需要先关闭selinux后再安装一键式重置密码插件，安装后再根据需要选择是否打开selinux。|
+|Debian|Debian 9.0 64bitDebian 8.8 64bitDebian 8.2 64bitDebian 7.5 64bitDebian 7.5 32bit|
+|openSUSE|openSUSE 42.2 64bitopenSUSE 13.2 64bitopenSUSE Leap 42.2 64bitopenSUSE Leap 42.1 64bit|
+|SUSE|SUSE 12 SP2 64bitSUSE 12 SP1 64bitSUSE 11 SP4 64bit|
+|Ubuntu|Ubuntu 16.10 32bitUbuntu 16.04 32bitUbuntu Server 16.04 64bitUbuntu Server 14.04 64bitUbuntu Server 14.04 32bit|
+|EulerOS|EulerOS 2.2 64bit|
+|Fedora|Fedora 25 64bitFedora 24 64bit|
+|Oracle Linux|Oracle Linux 7.3 64bitOracle Linux 6.9 64bitOracle Linux 6.5 64bit|
+
 
 
 ## 前提条件<a name="section5444910510395"></a>

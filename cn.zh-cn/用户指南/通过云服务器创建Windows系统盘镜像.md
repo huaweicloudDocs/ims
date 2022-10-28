@@ -13,14 +13,14 @@
 **图 1**  系统盘镜像使用流程<a name="fig197515154713"></a>  
 ![](figures/系统盘镜像使用流程.png "系统盘镜像使用流程")
 
--   创建系统盘镜像常见于应用扩容场景。也可用于混合云部署场景，为了实现云上及线下资源同步，可以借助镜像导入导出功能。以将公有云资源同步到私有云为例，实现过程如下：
+-   创建系统盘镜像常见于应用扩容场景。也可用于混合云部署场景，为了实现云上及线下资源同步，可以借助镜像导入导出功能，实现过程如下：
     1.  基于云服务器制作系统盘镜像
 
         >![](public_sys-resources/icon-note.gif) **说明：** 
         >此处的云服务器必须为私有镜像所创建，否则基于该云服务器制作的系统盘镜像不支持导出。
 
     2.  将镜像导出到OBS桶，详情可参阅[导出镜像](导出镜像.md)
-    3.  下载OBS桶中的镜像文件，上传到私有云使用
+    3.  下载OBS桶中的镜像文件
 
 -   无需关闭云服务器即可创建镜像。
 
@@ -71,70 +71,25 @@
 
         **表 1**  镜像类型和来源
 
-        <a name="table050019474117"></a>
-        <table><thead align="left"><tr id="row1350164712110"><th class="cellrowborder" valign="top" width="25.96%" id="mcps1.2.3.1.1"><p id="p12501447314"><a name="p12501447314"></a><a name="p12501447314"></a>参数</p>
-        </th>
-        <th class="cellrowborder" valign="top" width="74.03999999999999%" id="mcps1.2.3.1.2"><p id="p1350114720117"><a name="p1350114720117"></a><a name="p1350114720117"></a>说明</p>
-        </th>
-        </tr>
-        </thead>
-        <tbody><tr id="row1450134714120"><td class="cellrowborder" valign="top" width="25.96%" headers="mcps1.2.3.1.1 "><p id="p1550114471116"><a name="p1550114471116"></a><a name="p1550114471116"></a>区域</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.03999999999999%" headers="mcps1.2.3.1.2 "><p id="p1640415402364"><a name="p1640415402364"></a><a name="p1640415402364"></a>请选择靠近您业务的区域。</p>
-        <p id="p05011247218"><a name="p05011247218"></a><a name="p05011247218"></a>如果区域选择错误，可以在私有镜像创建成功后通过“<a href="跨区域复制镜像.md">跨区域复制功能</a>”将镜像复制到其他区域。</p>
-        </td>
-        </tr>
-        <tr id="row350214713113"><td class="cellrowborder" valign="top" width="25.96%" headers="mcps1.2.3.1.1 "><p id="p650294716116"><a name="p650294716116"></a><a name="p650294716116"></a>创建方式</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.03999999999999%" headers="mcps1.2.3.1.2 "><p id="p75021947615"><a name="p75021947615"></a><a name="p75021947615"></a>选择“系统盘镜像”。</p>
-        </td>
-        </tr>
-        <tr id="row1650284720113"><td class="cellrowborder" valign="top" width="25.96%" headers="mcps1.2.3.1.1 "><p id="p125022471113"><a name="p125022471113"></a><a name="p125022471113"></a>选择镜像源</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.03999999999999%" headers="mcps1.2.3.1.2 "><p id="p850214712118"><a name="p850214712118"></a><a name="p850214712118"></a>选择“云服务器”，然后从列表中选择已完成相关配置的云服务器。</p>
-        </td>
-        </tr>
-        </tbody>
-        </table>
+|参数|说明|
+|--|--|
+|创建方式|选择“创建私有镜像”。|
+|区域|请选择靠近您业务的区域。如果区域选择错误，可以在私有镜像创建成功后通过“跨区域复制功能”将镜像复制到其他区域。|
+|镜像类型|选择“系统盘镜像”。|
+|创建方式|选择“系统盘镜像”。|
+|选择镜像源|选择“云服务器”，然后从列表中选择已完成相关配置的云服务器。|
+
 
         **表 2**  配置信息
 
-        <a name="table6978715749"></a>
-        <table><thead align="left"><tr id="row1597918159415"><th class="cellrowborder" valign="top" width="25.91%" id="mcps1.2.3.1.1"><p id="p597916152418"><a name="p597916152418"></a><a name="p597916152418"></a>参数</p>
-        </th>
-        <th class="cellrowborder" valign="top" width="74.09%" id="mcps1.2.3.1.2"><p id="p99796151642"><a name="p99796151642"></a><a name="p99796151642"></a>说明</p>
-        </th>
-        </tr>
-        </thead>
-        <tbody><tr id="row190153318123"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p156591952159"><a name="p156591952159"></a><a name="p156591952159"></a>加密</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p96591652653"><a name="p96591652653"></a><a name="p96591652653"></a>镜像的加密属性，不可更改。</p>
-        <a name="ul94161232191418"></a><a name="ul94161232191418"></a><ul id="ul94161232191418"><li>使用未加密的<span id="text29471245182217"><a name="text29471245182217"></a><a name="text29471245182217"></a>云服务器</span><span id="text1394714458224"><a name="text1394714458224"></a><a name="text1394714458224"></a></span>创建的私有镜像为未加密的私有镜像。</li><li>使用加密的<span id="text532594852218"><a name="text532594852218"></a><a name="text532594852218"></a>云服务器</span><span id="text6325194812212"><a name="text6325194812212"></a><a name="text6325194812212"></a></span>创建的私有镜像为加密的私有镜像。</li></ul>
-        </td>
-        </tr>
-        <tr id="row36593522511"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p19659452051"><a name="p19659452051"></a><a name="p19659452051"></a>名称</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p126597521359"><a name="p126597521359"></a><a name="p126597521359"></a>设置一个便于您识别的镜像名称。</p>
-        </td>
-        </tr>
-        <tr id="row1320515143611"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p112050141866"><a name="p112050141866"></a><a name="p112050141866"></a>企业项目</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p1920521419610"><a name="p1920521419610"></a><a name="p1920521419610"></a>从下拉列表中选择所在的企业项目。该参数针对企业用户使用，只有开通了企业项目的客户，或者权限为企业主帐号的客户才可见。如需使用该功能，请联系您的客户经理申请开通。</p>
-        <p id="p1916781617248"><a name="p1916781617248"></a><a name="p1916781617248"></a>企业项目是一种云资源管理方式，企业项目管理服务提供统一的云资源按项目管理，以及项目内的资源管理、成员管理。</p>
-        </td>
-        </tr>
-        <tr id="row142057141619"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p1420612141267"><a name="p1420612141267"></a><a name="p1420612141267"></a>标签</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p820611415612"><a name="p820611415612"></a><a name="p820611415612"></a>可选参数，为镜像设置标签键和标签值，便于识别和管理。</p>
-        </td>
-        </tr>
-        <tr id="row720613141962"><td class="cellrowborder" valign="top" width="25.91%" headers="mcps1.2.3.1.1 "><p id="p7206111416617"><a name="p7206111416617"></a><a name="p7206111416617"></a>描述</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="74.09%" headers="mcps1.2.3.1.2 "><p id="p420631410613"><a name="p420631410613"></a><a name="p420631410613"></a>可选参数，对镜像进行描述。</p>
-        </td>
-        </tr>
-        </tbody>
-        </table>
+|参数|说明|
+|--|--|
+|加密|镜像的加密属性，不可更改。使用未加密的云服务器创建的私有镜像为未加密的私有镜像。使用加密的云服务器创建的私有镜像为加密的私有镜像。|
+|名称|设置一个便于您识别的镜像名称。|
+|企业项目|从下拉列表中选择所在的企业项目。该参数针对企业用户使用，只有开通了企业项目的客户，或者权限为企业主帐号的客户才可见。如需使用该功能，请联系您的客户经理申请开通。企业项目是一种云资源管理方式，企业项目管理服务提供统一的云资源按项目管理，以及项目内的资源管理、成员管理。|
+|标签|可选参数，为镜像设置标签键和标签值，便于识别和管理。|
+|描述|可选参数，对镜像进行描述。|
+
 
     3.  单击“立即创建”。
     4.  根据界面提示，确认镜像参数。阅读并勾选协议，单击“提交申请”。

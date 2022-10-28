@@ -185,7 +185,7 @@
         }
         ```
 
-    1.  根据“/boot/grub/grub.cfg”配置文件里标记的root分区，查找是否包括root=/dev/xvda2或者包括root=UUID=4eb40294-4c6f-4384-bbb6-b8795bbb1130信息。
+    1.  根据“/boot/grub2/grub.cfg”配置文件里标记的root分区，查找是否包括root=/dev/xvda2或者包括root=UUID=4eb40294-4c6f-4384-bbb6-b8795bbb1130信息。
         -   存在“root=UUID=4eb40294-4c6f-4384-bbb6-b8795bbb1130”，即root分区以UUID的表示形式，则无需修改。
         -   存在“root=/dev/xvda2”，即root分区以设备名称表示的形式，请执行步骤[5](#zh-cn_topic_0037352187_li2365474142222)。
 

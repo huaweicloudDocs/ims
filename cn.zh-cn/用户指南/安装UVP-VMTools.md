@@ -55,6 +55,10 @@
 
     2.  然后单击“Finish”。
 
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >安装后需要重启云服务器，否则无法识别网卡驱动。
+
+
 8.  请执行[验证安装成功](#zh-cn_topic_0036684065_section42271171)，验证UVP VMTools是否安装成功。
 
 ## 安装UVP VMTools升级包<a name="section1817195995910"></a>

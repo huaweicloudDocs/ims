@@ -23,7 +23,7 @@
 
     VMTools下载地址：[https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/vmtools-windows.zip](https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/vmtools-windows.zip)
 
-    不同版本Windows操作系统对应的VMTools获取方式，请参见[相关软件及获取方式](相关软件及获取方式.md)。
+    不同版本Windows操作系统和VMTools软件包的对应关系，请参见[相关软件及获取方式](相关软件及获取方式.md)。
 
 3.  使用UltraISO打开ISO镜像文件，如[图1](#fig1383516241387)所示。
 

@@ -29,20 +29,10 @@ Windows操作系统环境下，必须使用开源qemu-img工具进行镜像格�
 
         **表 1**  工具获取方式
 
-        <a name="table1944942510245"></a>
-        <table><thead align="left"><tr id="row144501125172416"><th class="cellrowborder" valign="top" width="23.580000000000002%" id="mcps1.2.3.1.1"><p id="p1774514135584"><a name="p1774514135584"></a><a name="p1774514135584"></a>工具包</p>
-        </th>
-        <th class="cellrowborder" valign="top" width="76.42%" id="mcps1.2.3.1.2"><p id="p1341522418110"><a name="p1341522418110"></a><a name="p1341522418110"></a>下载地址</p>
-        </th>
-        </tr>
-        </thead>
-        <tbody><tr id="row6450325162418"><td class="cellrowborder" valign="top" width="23.580000000000002%" headers="mcps1.2.3.1.1 "><p id="p143601654164819"><a name="p143601654164819"></a><a name="p143601654164819"></a>createMF.zip</p>
-        </td>
-        <td class="cellrowborder" valign="top" width="76.42%" headers="mcps1.2.3.1.2 "><p id="p830062115516"><a name="p830062115516"></a><a name="p830062115516"></a><a href="https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/createMF.zip" target="_blank" rel="noopener noreferrer">https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/createMF.zip</a></p>
-        </td>
-        </tr>
-        </tbody>
-        </table>
+|工具包|下载地址|
+|--|--|
+|createMF.zip|https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/createMF.zip|
+
 
     2.  请确保当前环境已安装jdk。
 
@@ -88,7 +78,7 @@ Windows操作系统环境下，必须使用开源qemu-img工具进行镜像格�
 
     6.  根据界面提示填写配置信息。
 
-        具体的配置参数说明，请参见[注册镜像（Windows）](注册镜像（Windows）.md)或[注册镜像（Linux）](注册镜像（Linux）.md)。
+        具体的配置参数说明，请参见[注册镜像（Linux）](注册镜像（Linux）.md)。
 
         >![](public_sys-resources/icon-caution.gif) **注意：** 
         >-   操作系统必须要和镜像文件所含的操作系统一致。

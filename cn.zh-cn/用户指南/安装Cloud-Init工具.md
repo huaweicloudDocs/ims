@@ -30,15 +30,21 @@
 
 请先执行如下步骤检查是否已安装Cloud-Init工具。
 
-在不同的操作系统下，查看是否已经安装Cloud-Init工具的方法不同，以CentOS 6系列为例，执行以下命令查看是否安装Cloud-Init工具。
+在不同的操作系统下，查看是否已经安装Cloud-Init工具的方法不同。以CentOS 6系列为例，执行以下命令查看是否安装Cloud-Init工具。
 
-**rpm -qa |grep cloud-init**
+**which cloud-init**
 
-回显类似如下，表示已经安装Cloud-Init工具，无需重复安装。
+-   回显类似如下，表示已经安装Cloud-Init工具，无需重复安装。
 
-```
-cloud-init-0.7.5-10.el6.centos.2.x86_64
-```
+    ```
+    cloud-init-0.7.5-10.el6.centos.2.x86_64
+    ```
+
+-   无回显信息表示未安装Cloud-Init工具。
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >由于Cloud-Init工具存在多种安装方法，如果无回显信息，请再次使用**rpm -qa |grep cloud-init**命令进行检查。**which cloud-init**和**rpm -qa |grep cloud-init**任何一个命令显示已安装，表示操作系统已安装Cloud-Init工具。
+
 
 如果已安装Cloud-Init工具，还需要执行以下操作：
 
@@ -74,7 +80,7 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
 
     SUSE操作系统的Cloud-Init网络安装地址：
 
-    [http://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/](http://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools)
+    [https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/](https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools)
 
     [http://download.opensuse.org/repositories/Cloud:/Tools/](http://download.opensuse.org/repositories/Cloud:/Tools/)
 
@@ -86,7 +92,7 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
     1.  登录到创建Linux私有镜像所使用的云服务器。
     2.  执行以下命令，安装SUSE 12的网络安装源。
 
-        **zypper ar http://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/SLE\_12\_SP3/Cloud:Tools.repo**
+        **zypper ar https://ftp5.gwdg.de/pub/opensuse/repositories/Cloud:/Tools/SLE\_12\_SP3/Cloud:Tools.repo**
 
     3.  执行以下命令，更新网络安装源。
 
@@ -123,43 +129,25 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
 
     **表 1**  Cloud-Init网络安装地址
 
-    <a name="table859383892814"></a>
-    <table><thead align="left"><tr id="row135773383280"><th class="cellrowborder" valign="top" width="14.540000000000001%" id="mcps1.2.4.1.1"><p id="p185771338112811"><a name="p185771338112811"></a><a name="p185771338112811"></a>操作系统类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="17.05%" id="mcps1.2.4.1.2"><p id="p3577938132810"><a name="p3577938132810"></a><a name="p3577938132810"></a>版本</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="68.41000000000001%" id="mcps1.2.4.1.3"><p id="p18577113811282"><a name="p18577113811282"></a><a name="p18577113811282"></a>网络安装地址</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row1759320380286"><td class="cellrowborder" rowspan="3" valign="top" width="14.540000000000001%" headers="mcps1.2.4.1.1 "><p id="p2593238202813"><a name="p2593238202813"></a><a name="p2593238202813"></a>CentOS</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="17.05%" headers="mcps1.2.4.1.2 "><p id="p8593163882820"><a name="p8593163882820"></a><a name="p8593163882820"></a>6系列32位</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="68.41000000000001%" headers="mcps1.2.4.1.3 "><p id="p8260102517347"><a name="p8260102517347"></a><a name="p8260102517347"></a><a href="https://archives.fedoraproject.org/pub/archive/epel/6/i386/" target="_blank" rel="noopener noreferrer">https://archives.fedoraproject.org/pub/archive/epel/6/i386/</a></p>
-    </td>
-    </tr>
-    <tr id="row11593143822818"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p6593163810285"><a name="p6593163810285"></a><a name="p6593163810285"></a>6系列64位</p>
-    </td>
-    <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p8593143812281"><a name="p8593143812281"></a><a name="p8593143812281"></a><a href="https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/" target="_blank" rel="noopener noreferrer">https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/</a></p>
-    </td>
-    </tr>
-    <tr id="row6298251089"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p5300851082"><a name="p5300851082"></a><a name="p5300851082"></a>7系列64位</p>
-    </td>
-    <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p1037383520415"><a name="p1037383520415"></a><a name="p1037383520415"></a><a href="https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-13.noarch.rpm" target="_blank" rel="noopener noreferrer">https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-13.noarch.rpm</a></p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|操作系统类型|版本|网络安装地址|
+|--|--|--|
+|CentOS|6系列32位|https://archives.fedoraproject.org/pub/archive/epel/6/i386/|
+|6系列64位|https://archives.fedoraproject.org/pub/archive/epel/6/x86_64/|
+|7系列64位|https://archives.fedoraproject.org/pub/epel/7/x86_64/Packages/e/|
 
-    此处以CentOS 6.5 64位为例，执行以下命令安装Cloud-Init。
 
-    **yum install https://archives.fedoraproject.org/pub/archive/epel/6/x86\_64/epel-release-**_xx-x__x_**.noarch.rpm**
+    执行以下命令安装Cloud-Init：
+
+    **yum install  _网络安装地址/_epel-release-**_**x-y**_**.noarch.rpm**
 
     **yum install cloud-init**
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >_xx-xx_表示当前操作系统对应的epel版本号。
+    >“网络安装地址”表示Cloud-Init对应的epel-release安装包的地址，_“__x-y”_表示当前操作系统对应的Cloud-Init epel-release版本号，执行命令时需参考[表1](#table859383892814)以及实际使用的安装包版本进行替换。
+    >-   以CentOS 6系列64位为例，当前版本号为6.8，则命令修改为：
+    >    **yum install https://archives.fedoraproject.org/pub/archive/epel/6/x86\_64/epel-release-6-8.noarch.rpm**
+    >-   以CentOS 7系列64位为例，当前版本号为7.14。则命令修改为：
+    >    **yum install https://archives.fedoraproject.org/pub/epel/7/x86\_64/Packages/e/epel-release-7-14.noarch.rpm**
 
 -   **Fedora操作系统**
 
@@ -210,6 +198,9 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
 3.  执行以下命令，安装本地下载的Cloud-Init源码包，安装过程中根据需要选择**--upgrade**参数。
 
     **pip install \[--upgrade\] /home/cloud-init-0.7.9.tar.gz**
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >安装Cloud-Init源码包的更多信息，请参见[cloud-init官方文档](http://cloudinit.readthedocs.io/?spm=a2c4g.11186623.0.0.c8bb67b7NIX4Oa)。
 
 4.  执行命令**cloud-init -v**，如回显如下类似信息表示安装Cloud-Init成功。
 
@@ -269,7 +260,17 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
 
     **cd  **cloud-init**-0.7.6**
 
-4.  按照操作系统类型，执行相应的命令安装Cloud-Init安装包。
+4.  若cloud-init为18.3\~22.3版本，则需要进行如下适配。否则跳过本步骤，继续执行下一步。
+
+    **sed -i '/VALID\_DMI\_ASSET\_TAGS =/a\\VALID\_DMI\_ASSET\_TAGS += \["HUAWEICLOUD"\]' cloudinit/sources/DataSourceOpenStack.py**
+
+    **cat cloudinit/sources/DataSourceOpenStack.py | grep VALID\_DMI\_ASSET\_TAGS**
+
+    确认执行结果如下图，表示语句添加成功。
+
+    ![](figures/zh-cn_image_0000001390619817.png)
+
+5.  按照操作系统类型，执行相应的命令安装Cloud-Init安装包。
 
     -   CentOS6.x/SUSE11.x：
 
@@ -289,7 +290,7 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
     >**groupadd adm**
     >**usermod -g adm syslog**
 
-5.  设置Cloud-Init相关服务为开机自启动。
+6.  设置Cloud-Init相关服务为开机自启动。
     -   若操作系统是sysvinit自启动管理服务，则执行以下命令进行设置。
 
         **chkconfig --add cloud-init-local; chkconfig --add cloud-init; chkconfig --add cloud-config; chkconfig --add cloud-final**
@@ -304,7 +305,7 @@ cloud-init-0.7.5-10.el6.centos.2.x86_64
 
         **systemctl status cloud-init-local.service cloud-init.service cloud-config.service cloud-final.service**
 
-6.  执行如下命令检查Cloud-Init是否安装成功。
+7.  执行如下命令检查Cloud-Init是否安装成功。
 
     **cloud-init -v**
 

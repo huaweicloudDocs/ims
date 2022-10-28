@@ -3,7 +3,7 @@
 云服务器的正常运行依赖于XEN Guest OS driver（PV driver）和KVM Guest OS driver（UVP VMTools），为了同时支持XEN虚拟化和KVM虚拟化，以及提升云服务器网络性能，需要确保镜像安装了PV driver和UVP VMTools。
 
 1.  将待优化的Windows私有镜像创建为云服务器，并开机登录该云服务器。
-2.  在云服务器上安装最新版本PV driver。
+2.  在云服务器云服务器上安装最新版本PV driver。
 
     具体操作请参见[安装PV driver](安装PV-driver.md)。
 

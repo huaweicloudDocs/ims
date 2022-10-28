@@ -9,8 +9,8 @@
 1.  如果这个私有镜像用于创建H2型云服务器，需要在镜像中安装InfiniBand网卡驱动。请根据IB类型，在Mellanox官网选择相应版本的InfiniBand网卡驱动下载（建议选择4.2-1.0.0.0的驱动版本下载使用），并根据Mellanox提供的操作指导进行安装。
     -   IB网卡类型：“Mellanox Technologies ConnectX-4 Infiniband HBA \(MCX455A-ECAT\)“
     -   Mellanox官网地址：[http://www.mellanox.com/](http://www.mellanox.com/)
-    -   网卡驱动下载地址：[http://www.mellanox.com/page/products\_dyn?product\_family=26&mtag=linux\_sw\_drivers](http://www.mellanox.com/page/products_dyn?product_family=26&mtag=linux_sw_drivers)
-    -   H2型云服务器介绍：[https://support.huaweicloud.com/productdesc-ecs/ecs\_01\_0044.html](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0044.html)
+    -   网卡驱动下载地址：[https://network.nvidia.com/products/infiniband-drivers/linux/mlnx\_ofed/](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)
+    -   H2型云服务器介绍：[超高性能计算型](https://support.huaweicloud.com/productdesc-ecs/ecs_01_0044.html)
 
 
 ## SRIOV驱动<a name="section94756508515"></a>
@@ -23,29 +23,11 @@
 
     **表 1**  SRIOV驱动
 
-    <a name="table17381225012"></a>
-    <table><thead align="left"><tr id="row1673812219017"><th class="cellrowborder" valign="top" width="21.602160216021602%" id="mcps1.2.4.1.1"><p id="p207385227015"><a name="p207385227015"></a><a name="p207385227015"></a>软件包</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="21.942194219421943%" id="mcps1.2.4.1.2"><p id="p1873815226013"><a name="p1873815226013"></a><a name="p1873815226013"></a>适用操作系统</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="56.455645564556455%" id="mcps1.2.4.1.3"><p id="p873892220018"><a name="p873892220018"></a><a name="p873892220018"></a>获取方式</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row273911227018"><td class="cellrowborder" rowspan="2" valign="top" width="21.602160216021602%" headers="mcps1.2.4.1.1 "><p id="p20739422105"><a name="p20739422105"></a><a name="p20739422105"></a>kmod-hinic.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="21.942194219421943%" headers="mcps1.2.4.1.2 "><p id="p8739122301"><a name="p8739122301"></a><a name="p8739122301"></a>EulerOS 2.3</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="56.455645564556455%" headers="mcps1.2.4.1.3 "><p id="p10403185722210"><a name="p10403185722210"></a><a name="p10403185722210"></a><a href="https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/hinic/EulerOS2.3/kmod-hinic.zip" target="_blank" rel="noopener noreferrer">https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/hinic/EulerOS2.3/kmod-hinic.zip</a></p>
-    </td>
-    </tr>
-    <tr id="row17739172218010"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p147392022205"><a name="p147392022205"></a><a name="p147392022205"></a>CentOS 7.6</p>
-    </td>
-    <td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p18402357182218"><a name="p18402357182218"></a><a name="p18402357182218"></a><a href="https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/hinic/CentOS7.6/kmod-hinic.zip" target="_blank" rel="noopener noreferrer">https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/hinic/CentOS7.6/kmod-hinic.zip</a></p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|软件包|适用操作系统|获取方式|
+|--|--|--|
+|kmod-hinic.zip|EulerOS 2.3|https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/hinic/EulerOS2.3/kmod-hinic.zip|
+|CentOS 7.6|https://ecs-instance-driver.obs.cn-north-1.myhuaweicloud.com/hinic/CentOS7.6/kmod-hinic.zip|
+
 
 2.  执行以下命令解压缩SRIOV驱动包。
 

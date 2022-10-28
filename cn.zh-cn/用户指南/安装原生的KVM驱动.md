@@ -20,52 +20,14 @@
 
 **表 1**  不同OS的修改方案
 
-<a name="table86668149313"></a>
-<table><thead align="left"><tr id="row6666914334"><th class="cellrowborder" valign="top" width="22.522252225222523%" id="mcps1.2.4.1.1"><p id="p96661214532"><a name="p96661214532"></a><a name="p96661214532"></a>操作系统</p>
-</th>
-<th class="cellrowborder" valign="top" width="50.43504350435043%" id="mcps1.2.4.1.2"><p id="p206662014833"><a name="p206662014833"></a><a name="p206662014833"></a>配置简介</p>
-</th>
-<th class="cellrowborder" valign="top" width="27.042704270427038%" id="mcps1.2.4.1.3"><p id="p16663148316"><a name="p16663148316"></a><a name="p16663148316"></a>操作指导</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row26667141336"><td class="cellrowborder" valign="top" width="22.522252225222523%" headers="mcps1.2.4.1.1 "><p id="p1966619141316"><a name="p1966619141316"></a><a name="p1966619141316"></a>CentOS/EulerOS系列</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.43504350435043%" headers="mcps1.2.4.1.2 "><p id="p910316123417"><a name="p910316123417"></a><a name="p910316123417"></a>以CentOS 7.0为例：</p>
-<a name="ol130895417103"></a><a name="ol130895417103"></a><ol id="ol130895417103"><li>请修改“/etc/dracut.conf”文件，在add_drivers项中添加virtio的驱动（<span class="keyword" id="keyword18938922444"><a name="keyword18938922444"></a><a name="keyword18938922444"></a>virtio驱动</span>：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。</li><li>保存并退出“/etc/dracut.conf”文件，执行<strong id="b526304920310"><a name="b526304920310"></a><a name="b526304920310"></a>dracut</strong> <strong id="b32636491133"><a name="b32636491133"></a><a name="b32636491133"></a>-f</strong>命令，重新生成initrd。</li></ol>
-</td>
-<td class="cellrowborder" valign="top" width="27.042704270427038%" headers="mcps1.2.4.1.3 "><p id="p26669141439"><a name="p26669141439"></a><a name="p26669141439"></a><a href="#section57411552112542">CentOS/EulerOS系列操作指导</a></p>
-</td>
-</tr>
-<tr id="row2666171415315"><td class="cellrowborder" valign="top" width="22.522252225222523%" headers="mcps1.2.4.1.1 "><p id="p06661214133"><a name="p06661214133"></a><a name="p06661214133"></a>Ubuntu/Debian系列</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.43504350435043%" headers="mcps1.2.4.1.2 "><a name="ol8821131691112"></a><a name="ol8821131691112"></a><ol id="ol8821131691112"><li>请修改“/etc/initramfs-tools/modules”文件，添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。</li><li>保存并退出“/etc/initramfs-tools/modules”文件，执行<strong id="b47242913513"><a name="b47242913513"></a><a name="b47242913513"></a>update-initramfs</strong> <strong id="b47272914516"><a name="b47272914516"></a><a name="b47272914516"></a>-u</strong>命令，重新生成initrd。</li></ol>
-</td>
-<td class="cellrowborder" valign="top" width="27.042704270427038%" headers="mcps1.2.4.1.3 "><p id="p366671418319"><a name="p366671418319"></a><a name="p366671418319"></a><a href="#section1865536911274">Ubuntu/Debian系列操作指导</a></p>
-</td>
-</tr>
-<tr id="row9666131414310"><td class="cellrowborder" rowspan="3" valign="top" width="22.522252225222523%" headers="mcps1.2.4.1.1 "><p id="p208973165719"><a name="p208973165719"></a><a name="p208973165719"></a>SUSE和openSUSE系列</p>
-</td>
-<td class="cellrowborder" valign="top" width="50.43504350435043%" headers="mcps1.2.4.1.2 "><p id="p1322315712817"><a name="p1322315712817"></a><a name="p1322315712817"></a>版本低于SUSE 12 SP1或低于openSUSE 13时：</p>
-<a name="ol20450122714114"></a><a name="ol20450122714114"></a><ol id="ol20450122714114"><li>请修改“/etc/sysconfig/kernel”文件，在INITRD_MODULES=""添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。</li><li>执行<strong id="b1888317541578"><a name="b1888317541578"></a><a name="b1888317541578"></a>mkinitrd</strong>命令，重新生成initrd。</li></ol>
-</td>
-<td class="cellrowborder" valign="top" width="27.042704270427038%" headers="mcps1.2.4.1.3 "><p id="p10666111417319"><a name="p10666111417319"></a><a name="p10666111417319"></a><a href="#section63790002112835">SUSE/openSUSE系列操作指导（版本低于SUSE 12 SP1/openSUSE 13）</a></p>
-</td>
-</tr>
-<tr id="row14666214536"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p16669141039"><a name="p16669141039"></a><a name="p16669141039"></a>版本为SUSE 12 SP1时：</p>
-<a name="ol190654017112"></a><a name="ol190654017112"></a><ol id="ol190654017112"><li>请修改“/etc/dracut.conf”文件，在add_drivers项中添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。</li><li>执行命令<strong id="b517432820816"><a name="b517432820816"></a><a name="b517432820816"></a>dracut</strong> <strong id="b14174628989"><a name="b14174628989"></a><a name="b14174628989"></a>-f</strong>，重新生成initrd。</li></ol>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p1866618141133"><a name="p1866618141133"></a><a name="p1866618141133"></a><a href="#section23748121182">SUSE/openSUSE系列操作指导（版本为SUSE 12 SP1）</a></p>
-</td>
-</tr>
-<tr id="row1827912331364"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p19968241599"><a name="p19968241599"></a><a name="p19968241599"></a>版本高于SUSE 12 SP1或高于openSUSE 13版本时：</p>
-<a name="ol14294195161113"></a><a name="ol14294195161113"></a><ol id="ol14294195161113"><li>请修改“/etc/dracut.conf”文件，在add_drivers项中添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。</li><li>保存并退出“/etc/dracut.conf”文件，执行<strong id="b767245216810"><a name="b767245216810"></a><a name="b767245216810"></a>dracut</strong> <strong id="b156725521489"><a name="b156725521489"></a><a name="b156725521489"></a>-f</strong>命令，重新生成initrd。</li></ol>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p20279143319616"><a name="p20279143319616"></a><a name="p20279143319616"></a><a href="#section17251152081820">SUSE/openSUSE系列操作指导（版本高于SUSE 12 SP1/openSUSE 13）</a></p>
-</td>
-</tr>
-</tbody>
-</table>
+|操作系统|配置简介|操作指导|
+|--|--|--|
+|CentOS/EulerOS系列|以CentOS 7.0为例：请修改“/etc/dracut.conf”文件，在add_drivers项中添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。保存并退出“/etc/dracut.conf”文件，执行**dracut** **-f**命令，重新生成initrd。|CentOS/EulerOS系列操作指导|
+|Ubuntu/Debian系列|请修改“/etc/initramfs-tools/modules”文件，添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。保存并退出“/etc/initramfs-tools/modules”文件，执行**update-initramfs** **-u**命令，重新生成initrd。|Ubuntu/Debian系列操作指导|
+|SUSE和openSUSE系列|版本低于SUSE 12 SP1或低于openSUSE 13时：请修改“/etc/sysconfig/kernel”文件，在INITRD_MODULES=""添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。执行**mkinitrd**命令，重新生成initrd。|SUSE/openSUSE系列操作指导（版本低于SUSE 12 SP1/openSUSE 13）|
+|版本为SUSE 12 SP1时：请修改“/etc/dracut.conf”文件，在add_drivers项中添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。执行命令**dracut** **-f**，重新生成initrd。|SUSE/openSUSE系列操作指导（版本为SUSE 12 SP1）|
+|版本高于SUSE 12 SP1或高于openSUSE 13版本时：请修改“/etc/dracut.conf”文件，在add_drivers项中添加virtio的驱动（virtio驱动：virtio_blk、virtio_scsi 、virtio_net、virtio_pci、virtio_ring、virtio）。驱动名之间以空格隔开。保存并退出“/etc/dracut.conf”文件，执行**dracut** **-f**命令，重新生成initrd。|SUSE/openSUSE系列操作指导（版本高于SUSE 12 SP1/openSUSE 13）|
+
 
 ## CentOS/EulerOS系列操作指导<a name="section57411552112542"></a>
 
@@ -87,7 +49,7 @@
 
     **dracut** **-f** **/boot/initramfs-2.6.32-573.8.1.el6.x86\_64.img**
 
-    如果引导的虚拟文件系统不是默认的initramfs，则命令为**：dracut** **-f** _实际使用的initramfs文件名或者initrd文件名_。“实际使用的initramfs文件名或者initrd文件名”可在grub.cfg配置（“/boot/grub/grub.cfg”或“/boot/grub2/grub.cfg”或“/boot/grub/grub. conf”，具体路径根据OS不同会有所区别）中获取。
+    如果引导的虚拟文件系统不是默认的initramfs，则命令为**：dracut** **-f** _实际使用的initramfs文件名或者initrd文件名_。“实际使用的initramfs文件名或者initrd文件名”可在grub.cfg配置（“/boot/grub/grub.cfg”或“/boot/grub2/grub.cfg”或“/boot/grub/grub.conf”，具体路径根据OS不同会有所区别）中获取。
 
 5.  如果引导的虚拟文件系统是initramfs，执行以下命令，检查是否已经成功装载了原生的KVM驱动相应模块。
 
@@ -296,7 +258,7 @@
 
     **dracut** **-f** **/boot/**initramfs**-******_文件名_
 
-    如果引导的虚拟文件系统不是默认的initramfs，则命令为：**dracut** **-f** _实际使用的initramfs文件名或者initrd文件名_。“实际使用的initramfs文件名或者initrd文件名”可在grub.cfg配置（“/boot/grub/grub.cfg”或“/boot/grub2/grub.cfg”或“/boot/grub/grub. conf”，具体路径根据OS不同会有所区别）中获取。
+    如果引导的虚拟文件系统不是默认的initramfs，则命令为：**dracut** **-f** _实际使用的initramfs文件名或者initrd文件名_。“实际使用的initramfs文件名或者initrd文件名”可在grub.cfg配置（“/boot/grub/grub.cfg”或“/boot/grub2/grub.cfg”或“/boot/grub/grub.conf”，具体路径根据OS不同会有所区别）中获取。
 
 5.  如果引导的虚拟文件系统是initramfs，执行以下命令，检查是否已经成功装载了原生的KVM驱动相应模块。
 

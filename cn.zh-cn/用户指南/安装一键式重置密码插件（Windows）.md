@@ -12,42 +12,15 @@ CloudResetPwdAgent安装包中包含CloudResetPwdAgent和CloudResetPwdUpdateAgen
 ## 安装须知<a name="section6704341693848"></a>
 
 -   用户自行决定是否安装CloudResetPwdAgent插件，使云服务器具备一键式重置密码功能。
--   一键式重置密码插件CloudResetPwdAgent已按照GNU General Public License v2.0协议开源至[Github开源平台](https://github.com/huaweicloud/cloudresetpwdagent)，开放、透明、安全，请您放心使用。
+-   一键式重置密码插件CloudResetPwdAgent已按照GNU General Public License v2.0协议开源至Github开源平台，开放、透明、安全，请您放心使用。
 -   支持安装一键式重置密码插件的操作系统版本如[表1](#table1813411428710)所示。
 
     **表 1**  支持安装一键式重置密码插件的操作系统版本
 
-    <a name="table1813411428710"></a>
-    <table><thead align="left"><tr id="row13118194215717"><th class="cellrowborder" valign="top" width="26.14%" id="mcps1.2.3.1.1"><p id="p191185429715"><a name="p191185429715"></a><a name="p191185429715"></a>操作系统类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="73.86%" id="mcps1.2.3.1.2"><p id="p8118154215717"><a name="p8118154215717"></a><a name="p8118154215717"></a>操作系统版本</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row161341242774"><td class="cellrowborder" valign="top" width="26.14%" headers="mcps1.2.3.1.1 "><p id="p111854210713"><a name="p111854210713"></a><a name="p111854210713"></a>Windows</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="73.86%" headers="mcps1.2.3.1.2 "><p id="p011816421778"><a name="p011816421778"></a><a name="p011816421778"></a>Windows Server 2008 R2 Enterprise 64bit English</p>
-    <p id="p1118144215714"><a name="p1118144215714"></a><a name="p1118144215714"></a>Windows Server 2008 R2 Enterprise 64bit中文版</p>
-    <p id="p151181542676"><a name="p151181542676"></a><a name="p151181542676"></a>Windows Server 2008 R2 Standard 64bit English</p>
-    <p id="p111183421073"><a name="p111183421073"></a><a name="p111183421073"></a>Windows Server 2008 SP2 Enterprise 64bit</p>
-    <p id="p3118134219718"><a name="p3118134219718"></a><a name="p3118134219718"></a>Windows Server 2008 R2 Datacenter 64bit</p>
-    <p id="p10118134214718"><a name="p10118134214718"></a><a name="p10118134214718"></a>Windows Server 2008 R2 Standard 64bit</p>
-    <p id="p11181142775"><a name="p11181142775"></a><a name="p11181142775"></a>Windows Server 2012 R2 Standard 64bit English</p>
-    <p id="p1211824217711"><a name="p1211824217711"></a><a name="p1211824217711"></a>Windows Server 2012 R2 Standard 64bit中文版</p>
-    <p id="p1013415425712"><a name="p1013415425712"></a><a name="p1013415425712"></a>Windows Server 2012 R2 Datacenter 64bit English</p>
-    <p id="p12134174212719"><a name="p12134174212719"></a><a name="p12134174212719"></a>Windows Server 2012 R2 Datacenter 64bit中文版</p>
-    <p id="p413474216718"><a name="p413474216718"></a><a name="p413474216718"></a>Windows Web Server 2008 R2 64bit</p>
-    <p id="p1134174216714"><a name="p1134174216714"></a><a name="p1134174216714"></a>Windows 2008 Enterprise R2 64bit英文版</p>
-    <p id="p813411429713"><a name="p813411429713"></a><a name="p813411429713"></a>Windows 2012 R2 Standard</p>
-    <p id="p41347423710"><a name="p41347423710"></a><a name="p41347423710"></a>Windows 2012 R2 Datacenter</p>
-    <p id="p51347423714"><a name="p51347423714"></a><a name="p51347423714"></a>Windows 2012 R2 Datacenter English</p>
-    <p id="p213418421071"><a name="p213418421071"></a><a name="p213418421071"></a>Windows 2012 R2 Standard English</p>
-    <p id="p10134114213717"><a name="p10134114213717"></a><a name="p10134114213717"></a>Windows 2016 Datacenter 64bit英文版</p>
-    <p id="p131346421713"><a name="p131346421713"></a><a name="p131346421713"></a>Windows 2016 Datacenter 64bit中文版</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|操作系统类型|操作系统版本|
+|--|--|
+|Windows|Windows Server 2008 R2 Enterprise 64bit EnglishWindows Server 2008 R2 Enterprise 64bit中文版Windows Server 2008 R2 Standard 64bit EnglishWindows Server 2008 SP2 Enterprise 64bitWindows Server 2008 R2 Datacenter 64bitWindows Server 2008 R2 Standard 64bitWindows Server 2012 R2 Standard 64bit EnglishWindows Server 2012 R2 Standard 64bit中文版Windows Server 2012 R2 Datacenter 64bit EnglishWindows Server 2012 R2 Datacenter 64bit中文版Windows Web Server 2008 R2 64bitWindows 2008 Enterprise R2 64bit英文版Windows 2012 R2 StandardWindows 2012 R2 DatacenterWindows 2012 R2 Datacenter EnglishWindows 2012 R2 Standard EnglishWindows 2016 Datacenter 64bit英文版Windows 2016 Datacenter 64bit中文版|
+
 
 
 ## 前提条件<a name="section5444910510395"></a>

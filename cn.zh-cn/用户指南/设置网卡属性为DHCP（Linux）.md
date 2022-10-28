@@ -17,34 +17,59 @@
 
 ## 操作步骤<a name="zh-cn_topic_0029124465_section5756595193936"></a>
 
-本节操作以Ubuntu 14.04操作系统为例，介绍检查及设置云服务器网卡属性的方法。
+本节操作以Ubuntu 16.04操作系统为例，介绍检查及设置云服务器网卡属性的方法。
 
 1.  在云服务器上执行以下命令，使用vi编辑器打开“/etc/network/interfaces”文件，查看网卡的网络配置。
 
     **vi /etc/network/interfaces**
 
-    -   信息显示所有网卡的网络配置为DHCP模式时，如[图1](#zh-cn_topic_0029124465_fig56651987173613)所示，无需重复设置网卡属性，输入**:q**退出编辑器。
+    -   信息显示所有网卡的网络配置为DHCP模式时，无需重复设置网卡属性，输入**:q**退出编辑器。
 
-        **图 1**  网卡的网络配置为DHCP模式<a name="zh-cn_topic_0029124465_fig56651987173613"></a>  
-        ![](figures/网卡的网络配置为DHCP模式.png "网卡的网络配置为DHCP模式")
+        ```
+        auto lo
+        iface lo inet loopback
+        auto eth0
+        iface eth0 inet dhcp
+        
+        auto eth1
+        iface eth1 inet dhcp
+        ```
 
-    -   信息显示网卡的网络配置为静态IP地址时，如[图2](#zh-cn_topic_0029124465_fig4727523517369)所示，请执行[2](#zh-cn_topic_0029124465_li47654828194142)。
+    -   信息显示网卡的网络配置为静态IP地址时，请执行[2](#zh-cn_topic_0029124465_li47654828194142)。
 
-        **图 2**  网卡的网络配置为静态IP地址<a name="zh-cn_topic_0029124465_fig4727523517369"></a>  
-        ![](figures/网卡的网络配置为静态IP地址.png "网卡的网络配置为静态IP地址")
+        ```
+        auto lo
+        iface lo inet loopback
+        auto eth0
+        #iface eth0 inet dhcp
+        iface eth0 inet static
+        address 192.168.1.109
+        netmask 255.255.255.0
+        gateway 192.168.1.1
+        ```
 
 2.  <a name="zh-cn_topic_0029124465_li47654828194142"></a>按“i”进入编辑模式。
-3.  删除静态IP设置的相关内容，然后将对应的网卡设置为DHCP方式，如[图3](#zh-cn_topic_0029124465_fig9449703194420)所示。
+3.  删除静态IP设置的相关内容，然后将对应的网卡设置为DHCP方式。
 
     您也可以使用“\#”注释掉静态IP设置的相关内容。
 
-    **图 3**  设置网卡为DHCP方式<a name="zh-cn_topic_0029124465_fig9449703194420"></a>  
-    ![](figures/设置网卡为DHCP方式.png "设置网卡为DHCP方式")
+    ```
+    auto lo
+    iface lo inet loopback
+    auto eth0
+    iface eth0 inet dhcp
+    ```
 
-    如果您有多个网卡，请将剩余网卡按照上述方法设置为DHCP方式，如[图4](#zh-cn_topic_0029124465_fig29429713194459)所示。
+    如果您有多个网卡，请将剩余网卡按照上述方法设置为DHCP方式。
 
-    **图 4**  设置多个网卡为DHCP方式<a name="zh-cn_topic_0029124465_fig29429713194459"></a>  
-    ![](figures/设置多个网卡为DHCP方式.png "设置多个网卡为DHCP方式")
+    ```
+    auto lo
+    iface lo inet loopback
+    auto eth0
+    iface eth0 inet dhcp
+    auto eth1
+    iface eth1 inet dhcp
+    ```
 
 4.  按“ESC”后，输入**:wq**，按“Enter”。
 
@@ -57,5 +82,5 @@
 
 -   CentOS系列/EulerOS系列：使用vi编辑器在“/etc/sysconfig/network-scripts/ifcfg-ethX”配置文件中添加PERSISTENT\_DHCLIENT="y"。
 -   SUSE系列：使用vi编辑器将“/etc/sysconfig/network/dhcp”配置文件中的DHCLIENT\_USE\_LAST\_LEASE设置为no。
--   Ubuntu 12.04：将dhclient升级为ISC dhclient 4.2.4以支持网卡持续DHCP获取IP地址能力。请自行安装isc-dhcp-server进行升级。
+-   Ubuntu 12.04及以上版本：将dhclient升级为ISC dhclient 4.2.4以支持网卡持续DHCP获取IP地址能力。请自行安装isc-dhcp-server进行升级。
 

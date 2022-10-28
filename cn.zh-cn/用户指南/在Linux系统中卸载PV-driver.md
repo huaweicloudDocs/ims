@@ -2,7 +2,7 @@
 
 ## 操作场景<a name="section8801182220417"></a>
 
-在优化Linux私有镜像过程中，需要在云服务器上修改fstab和grub的UUID，并安装原生的XEN和KVM驱动。为了使用户可以成功安装原生的XEN和KVM驱动，用户需要先卸载PV driver。
+在优化Linux私有镜像过程中，需要在云服务器上修改fstab和grub的UUID，并安装原生的XEN和KVM驱动。为了成功安装原生的XEN和KVM驱动，需要先卸载PV driver。
 
 ## 操作步骤<a name="section1381148120949"></a>
 
@@ -11,7 +11,8 @@
 
     **ps -ef | grep uvp-monitor**
 
-    回显信息如下图所示为已安装Tools。
+    -   若回显信息如下所示，表示已安装PV driver相关的驱动。
+    -   若无如下回显信息，表示未安装PV driver相关的驱动，本节操作结束。
 
     ```
     root     4561        1    0   Jun29 ?           00:00:00   /usr/bin/uvp-monitor
@@ -19,10 +20,7 @@
     root     6185     6085    0   03:04  pts/2      00:00:00   grep uvp-monitor
     ```
 
-    -   如果已安装，执行步骤[3](#li4726695220949)。
-    -   如果未安装，执行[修改fstab文件磁盘标识方式为UUID](修改fstab文件磁盘标识方式为UUID.md)，[安装原生的KVM驱动](安装原生的KVM驱动.md)和[修改grub文件磁盘标识方式为UUID](修改grub文件磁盘标识方式为UUID.md)。
-
-3.  <a name="li4726695220949"></a>在VNC登录窗口的云服务器操作系统界面，打开命令行终端（具体方式请查询对应操作系统的使用手册）。
+3.  在VNC登录窗口的云服务器操作系统界面，打开命令行终端（具体方式请查询对应操作系统的使用手册）。
 
     进入命令行模式。
 
@@ -36,7 +34,7 @@
         The PV driver is uninstalled successfully. Reboot the system for the uninstallation to take effect.
         ```
 
-    -   回显信息提示不存在“.uvp-monitor”，如所示，请执行步骤[5](#li45681026173616)。
+    -   回显信息如下提示不存在“.uvp-monitor”时，请执行步骤[5](#li45681026173616)。
 
         ```
         -bash: /etc/.uvp-monitor/uninstall: No such file or directory

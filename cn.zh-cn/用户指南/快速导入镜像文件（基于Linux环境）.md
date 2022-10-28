@@ -35,25 +35,11 @@ Linux操作系统环境下，建议使用qemu-img-hw工具进行镜像格式转�
 
     **表 1**  工具获取方式
 
-    <a name="table0972499425"></a>
-    <table><thead align="left"><tr id="row1397259124216"><th class="cellrowborder" valign="top" width="22.189999999999998%" id="mcps1.2.3.1.1"><p id="p11972119184212"><a name="p11972119184212"></a><a name="p11972119184212"></a>工具包</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="77.81%" id="mcps1.2.3.1.2"><p id="p10972119144210"><a name="p10972119144210"></a><a name="p10972119144210"></a>下载地址</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row179721591423"><td class="cellrowborder" valign="top" width="22.189999999999998%" headers="mcps1.2.3.1.1 "><p id="p10972494428"><a name="p10972494428"></a><a name="p10972494428"></a>qemu-img-hw.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="77.81%" headers="mcps1.2.3.1.2 "><p id="p19721499428"><a name="p19721499428"></a><a name="p19721499428"></a><a href="https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/qemu-img-hw.zip" target="_blank" rel="noopener noreferrer">https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/qemu-img-hw.zip</a></p>
-    </td>
-    </tr>
-    <tr id="row29721093429"><td class="cellrowborder" valign="top" width="22.189999999999998%" headers="mcps1.2.3.1.1 "><p id="p11972193425"><a name="p11972193425"></a><a name="p11972193425"></a>createMF.zip</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="77.81%" headers="mcps1.2.3.1.2 "><p id="p6972189184216"><a name="p6972189184216"></a><a name="p6972189184216"></a><a href="https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/createMF.zip" target="_blank" rel="noopener noreferrer">https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/createMF.zip</a></p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|工具包|下载地址|
+|--|--|
+|qemu-img-hw.zip|https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/qemu-img-hw.zip|
+|createMF.zip|https://cn-south-1-cloud-reset-pwd.obs.cn-south-1.myhuaweicloud.com/imageImportTools/createMF.zip|
+
 
 3.  使用qemu-img-hw工具转换镜像格式。
     1.  进入qemu-img-hw存放目录，以存放在“/usr/qemu-img-hw”为例：
@@ -185,7 +171,7 @@ Linux操作系统环境下，建议使用qemu-img-hw工具进行镜像格式转�
 
     6.  根据界面提示填写配置信息。
 
-        具体的配置参数说明，请参见[注册镜像（Windows）](注册镜像（Windows）.md)或[注册镜像（Linux）](注册镜像（Linux）.md)。
+        具体的配置参数说明，请参见[注册镜像（Linux）](注册镜像（Linux）.md)。
 
         >![](public_sys-resources/icon-caution.gif) **注意：** 
         >-   操作系统必须要和镜像文件所含的操作系统一致。
@@ -199,5 +185,73 @@ Linux操作系统环境下，建议使用qemu-img-hw工具进行镜像格式转�
     您可以通过接口POST /v2/cloudimages/quickimport/action，实现镜像文件快速导入功能。
 
     该接口的具体调用方法，请参见“[镜像文件快速导入](https://support.huaweicloud.com/api-ims/ims_03_0605.html)”。
+
+
+## 附1：qemu-img-hw常用命令<a name="section962713814611"></a>
+
+-   镜像文件格式转换：**qemu-img-hw** **convert** **-p** **-O** _\{目标镜像格式\}_ _\{待转换镜像文件\}_ _\{目标镜像文件\}_
+
+    上述命令中各参数对应的说明如下：
+
+    -p：标识转换的进度条
+
+    -O：（必须是大写）后面的参数为转换出来的镜像格式 + 源镜像文件名称 + 目标镜像文件名称
+
+    示例：将qcow2格式转为zvhd2格式
+
+    **qemu-img-hw** **convert** **-p** **-O** **zvhd2** **test.qcow2** **test.zvhd2**
+
+-   查询镜像文件信息：**qemu-img-hw** **info** _\{镜像文件\}_
+
+    示例：**qemu-img-hw** **info** **test.zvhd2**
+
+-   查看帮助：**qemu-img-hw** **-help**
+
+## 附2：执行qemu-img-hw常见报错<a name="section168872043899"></a>
+
+-   问题描述：
+
+    执行qemu-img-hw命令时回显信息如下：
+
+    ```
+    ./qemu-img-hw: /lib64/libc.so.6: version `GLIBC_2.14' not found (required by ./qemu-img-hw)
+    ```
+
+    解决方法：
+
+    执行**strings** **/lib64/libc.so.6** **|** **grep** **GLIBC**查看GLIBC版本，若由于版本过低造成，可安装高版本即可。依次执行下述命令：
+
+    **wget** **http://ftp.gnu.org/gnu/glibc/glibc-2.15.tar.gz**
+
+    **wget** **http://ftp.gnu.org/gnu/glibc/glibc-ports-2.15.tar.gz**
+
+    **tar** **-xvf** **glibc-2.15.tar.gz**
+
+    **tar** **-xvf** **glibc-ports-2.15.tar.gz**
+
+    **mv** **glibc-ports-2.15** **glibc-2.15/ports**
+
+    **mkdir** **glibc-build-2.15**
+
+    **cd** **glibc-build-2.15**
+
+    **../glibc-2.15/configure** **--prefix=/usr** **--disable-profile** **--enable-add-ons** **--with-headers=/usr/include** **--with-binutils=/usr/bin**
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >此命令若报错“configure: error: no acceptable C compiler found in $PATH”，请先执行：**yum** **-y** **install** **gcc**
+
+    **make**
+
+    **make** **install**
+
+-   问题描述：
+
+    执行qemu-img-hw命令时回显信息如下：
+
+    ```
+    ./qemu-img-hw: error while loading shared libraries: libaio.so.1: cannot open shared object file: No such file or directory
+    ```
+
+    解决方法：请先执行命令**yum** **install** **libaio**
 
 

@@ -9,9 +9,6 @@
 ## 操作步骤<a name="section1350115288165"></a>
 
 1.  配置云服务器。
-
-    具体操作请参考“[Linux外部镜像文件在导出前未完成初始化配置，怎么办？](https://support.huaweicloud.com/ims_faq/ims_faq_0012.html#section51410413191)”中的“步骤4：配置云服务器”。
-
     1.  配置网络
         -   检查云服务器的私有IP是否和控制台显示的私有IP一致（可以通过**ifconfig**查看）。如果不一致，请参考“[清理网络规则文件](https://support.huaweicloud.com/usermanual-ims/ims_01_0406.html)”清理网络规则文件。
         -   检查网卡属性是否为DHCP。如果云服务器网络配置为静态IP地址，请参考“[设置网卡属性为DHCP](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0030713176.html)”修改为DHCP方式。
@@ -25,7 +22,7 @@
         >建议您禁用任何防病毒软件或入侵检测软件，安装原生的XEN和KVM驱动完成后，您可以再次启用这些软件。
 
         -   卸载PV driver，请参考“[在Linux系统中卸载PV driver](https://support.huaweicloud.com/usermanual-ims/ims_01_0323.html)”。
-        -   安装原生的XEN和KVM驱动，请参考“[安装原生的XEN和KVM驱动](https://support.huaweicloud.com/usermanual-ims/ims_01_0326.html)”。
+        -   安装原生的XEN和KVM驱动，请参考“[安装原生的XEN和KVM驱动](https://support.huaweicloud.com/ims_faq/ims_faq_0402.html)”。
 
         驱动安装完成后需要清除日志文件、历史记录等，请参考“[清除系统日志](https://support.huaweicloud.com/usermanual-ims/ims_01_0327.html)”。
 

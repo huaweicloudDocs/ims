@@ -13,23 +13,9 @@
 
 **表 1**  GRID驱动安装方法
 
-<a name="table18701447205920"></a>
-<table><thead align="left"><tr id="row10870124755917"><th class="cellrowborder" valign="top" width="29.959999999999997%" id="mcps1.2.3.1.1"><p id="p1845729208"><a name="p1845729208"></a><a name="p1845729208"></a>实例类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="70.04%" id="mcps1.2.3.1.2"><p id="p1787010471594"><a name="p1787010471594"></a><a name="p1787010471594"></a>安装方法</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row13870154714590"><td class="cellrowborder" valign="top" width="29.959999999999997%" headers="mcps1.2.3.1.1 "><p id="p98709475592"><a name="p98709475592"></a><a name="p98709475592"></a>G1型</p>
-</td>
-<td class="cellrowborder" valign="top" width="70.04%" headers="mcps1.2.3.1.2 "><p id="p9546243239"><a name="p9546243239"></a><a name="p9546243239"></a>请参见“<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0149610914.html#section2" target="_blank" rel="noopener noreferrer">下载GRID驱动及License软件包</a>”。</p>
-</td>
-</tr>
-<tr id="row0870194735920"><td class="cellrowborder" valign="top" width="29.959999999999997%" headers="mcps1.2.3.1.1 "><p id="p08701147175915"><a name="p08701147175915"></a><a name="p08701147175915"></a>G3型</p>
-</td>
-<td class="cellrowborder" valign="top" width="70.04%" headers="mcps1.2.3.1.2 "><p id="p1777573951416"><a name="p1777573951416"></a><a name="p1777573951416"></a>请参见“<a href="https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0149610914.html#section2" target="_blank" rel="noopener noreferrer">下载GRID驱动及License软件包</a>”。</p>
-</td>
-</tr>
-</tbody>
-</table>
+|实例类型|安装方法|
+|--|--|
+|G1型|请参见“下载GRID驱动及License软件包”。|
+|G3型|请参见“下载GRID驱动及License软件包”。|
+
 

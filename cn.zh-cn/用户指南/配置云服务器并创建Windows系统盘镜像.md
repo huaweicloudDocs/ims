@@ -18,8 +18,8 @@
 
         安装完以后需要清除系统日志，请参考“[清除系统日志](https://support.huaweicloud.com/usermanual-ims/ims_01_0320.html)”。
 
-    4.  （可选）配置增值功能
-        -   安装并配置Cloudbase-Init，请参考“[安装并配置Cloudbase-Init工具](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0030730602.html)”。
+    4.  安装并配置Cloudbase-Init，保证镜像创建的新云服务器可以使用控制台的“用户数据注入”功能注入初始化自定义信息（例如为云服务器设置登录密码）。请参考“[安装并配置Cloudbase-Init工具](https://support.huaweicloud.com/usermanual-ims/zh-cn_topic_0030730602.html)”。
+    5.  （可选）配置增值功能。
         -   开启网卡多队列，请参考“[如何设置镜像的网卡多队列属性？](https://support.huaweicloud.com/ims_faq/ims_faq_0030.html)”。
         -   配置IPv6地址，请参考“[如何开启云服务器动态获取IPv6（试用）？](https://support.huaweicloud.com/ims_faq/ims_faq_0046.html)”。
 

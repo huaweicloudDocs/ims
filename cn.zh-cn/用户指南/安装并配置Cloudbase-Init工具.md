@@ -126,30 +126,12 @@
 
     **表 1**  Windows操作系统SAN策略类型
 
-    <a name="table01861238133815"></a>
-    <table><thead align="left"><tr id="row81963383381"><th class="cellrowborder" valign="top" width="15%" id="mcps1.2.3.1.1"><p id="p420114385381"><a name="p420114385381"></a><a name="p420114385381"></a>类型</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="85%" id="mcps1.2.3.1.2"><p id="p9201838153816"><a name="p9201838153816"></a><a name="p9201838153816"></a>说明</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row12204113873819"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.3.1.1 "><p id="p220511386388"><a name="p220511386388"></a><a name="p220511386388"></a>OnlineAll</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="85%" headers="mcps1.2.3.1.2 "><p id="p320719385384"><a name="p320719385384"></a><a name="p320719385384"></a>表示所有新发现磁盘都置于在线模式。</p>
-    </td>
-    </tr>
-    <tr id="row1420833823819"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.3.1.1 "><p id="p17209183853811"><a name="p17209183853811"></a><a name="p17209183853811"></a>OfflineShared</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="85%" headers="mcps1.2.3.1.2 "><p id="p1621083893810"><a name="p1621083893810"></a><a name="p1621083893810"></a>表示所有共享总线上（比如FC、ISCSI）的新发现磁盘都置于离线模式，非共享总线上的磁盘都置于在线模式。</p>
-    </td>
-    </tr>
-    <tr id="row1621043819381"><td class="cellrowborder" valign="top" width="15%" headers="mcps1.2.3.1.1 "><p id="p12212238153815"><a name="p12212238153815"></a><a name="p12212238153815"></a>OfflineInternal</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="85%" headers="mcps1.2.3.1.2 "><p id="p2217138133815"><a name="p2217138133815"></a><a name="p2217138133815"></a>表示所有新发现磁盘都置于离线模式。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+|类型|说明|
+|--|--|
+|OnlineAll|表示所有新发现磁盘都置于在线模式。|
+|OfflineShared|表示所有共享总线上（比如FC、ISCSI）的新发现磁盘都置于离线模式，非共享总线上的磁盘都置于在线模式。|
+|OfflineInternal|表示所有新发现磁盘都置于离线模式。|
+
 
     1.  运行cmd.exe，执行以下命令，使用DiskPart工具来查询云服务器当前的SAN策略。
 
