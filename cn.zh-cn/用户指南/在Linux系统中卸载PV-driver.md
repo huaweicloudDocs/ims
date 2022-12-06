@@ -2,7 +2,9 @@
 
 ## 操作场景<a name="section8801182220417"></a>
 
-在优化Linux私有镜像过程中，需要在云服务器上修改fstab和grub的UUID，并安装原生的XEN和KVM驱动。为了成功安装原生的XEN和KVM驱动，需要先卸载PV driver。
+对于XEN虚拟化类型的弹性云服务器，在优化Linux私有镜像过程中，需要在云服务器上修改fstab和grub的UUID，并安装原生的XEN和KVM驱动。
+
+为了成功安装原生的XEN和KVM驱动，需要先卸载PV driver。
 
 ## 操作步骤<a name="section1381148120949"></a>
 
